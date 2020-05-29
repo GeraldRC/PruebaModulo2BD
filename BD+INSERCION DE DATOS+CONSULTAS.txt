@@ -1,0 +1,426 @@
+CREATE TABLE alternativa (
+    idalternativa NUMBER(20,5) NOT NULL,
+    puntajealternativa FLOAT,
+    estado CHAR(1),
+    pregunta_idpregunta  NUMBER(10,3) NOT NULL,
+    enunciado  VARCHAR2(1000 CHAR),
+    CONSTRAINT alternativa_pk PRIMARY KEY (idalternativa, pregunta_idpregunta));
+
+
+CREATE TABLE autor (
+    idautor  NUMBER(10,3) NOT NULL,
+    nombre VARCHAR2(100 CHAR),
+    CONSTRAINT autor_pk PRIMARY KEY ( idautor ),
+    CONSTRAINT autor_nombre_un UNIQUE ( nombre ));
+
+
+CREATE TABLE autor_test (
+    autor_idautor  NUMBER(10, 3) NOT NULL,
+    evaluacion_idtest  NUMBER(10, 3) NOT NULL,
+    CONSTRAINT autor_test_pk PRIMARY KEY (autor_idautor,evaluacion_idtest));
+
+
+
+CREATE TABLE estudiante (
+    idestudiante NUMBER(10, 3) NOT NULL,
+    nombre VARCHAR2(100 CHAR),
+    primerapellido VARCHAR2(100 CHAR),
+    segundoapellido VARCHAR2(100 CHAR),
+    rut  VARCHAR2(100 CHAR),
+    programa_idprograma  NUMBER(10,3) NOT NULL,
+    CONSTRAINT estudiante_pk PRIMARY KEY (idestudiante));
+
+CREATE TABLE evaluacion (
+    idtest  NUMBER(10,3) NOT NULL,
+    nombre  VARCHAR2(100 CHAR) NOT NULL,
+    descripcion VARCHAR2(200),
+    fechacreacion DATE,
+    puntajeprueba FLOAT,
+    programa_idprograma  NUMBER(10,3),
+    CONSTRAINT evaluacion_pk PRIMARY KEY ( idtest ),
+    CONSTRAINT evaluacion_nombre_un UNIQUE ( nombre ));
+
+CREATE TABLE pregunta (
+    idpregunta NUMBER(10,3) NOT NULL,
+    enunciado  VARCHAR2(1000 CHAR),
+    puntajepregunta FLOAT,
+    evaluacion_idtest NUMBER(10,3),
+    CONSTRAINT pregunta_pk PRIMARY KEY ( idpregunta ));
+
+
+
+CREATE TABLE programa (
+    idprograma  NUMBER(10, 3) NOT NULL,
+    nombre  VARCHAR2(1000 CHAR),
+    CONSTRAINT programa_pk PRIMARY KEY ( idprograma ));
+
+
+
+CREATE TABLE resultado (
+    idresultado   NUMBER(10, 3) NOT NULL,
+    puntajeobtenido  FLOAT,
+    cantidadcorrectas FLOAT,
+    cantidadincorrectas  FLOAT,
+    nota FLOAT,
+    estado CHAR(1),
+    estudiante_idestudiante  NUMBER(10, 3),
+    evaluacion_idtest  NUMBER(10, 3) NOT NULL,
+    CONSTRAINT resultado_pk PRIMARY KEY (idresultado));
+
+
+
+CREATE TABLE unidad (
+    idunidad NUMBER(10, 3) NOT NULL,
+    nombre VARCHAR2(200 CHAR),
+    descripcion VARCHAR2(1000 CHAR),
+    programa_idprograma  NUMBER(10, 3) NOT NULL,
+    CONSTRAINT unidad_pk PRIMARY KEY (idunidad)
+);
+
+
+
+ALTER TABLE alternativa
+    ADD CONSTRAINT alternativa_pregunta_fk FOREIGN KEY ( pregunta_idpregunta )
+        REFERENCES pregunta ( idpregunta );
+
+ALTER TABLE autor_test
+    ADD CONSTRAINT autor_test_autor_fk FOREIGN KEY ( autor_idautor )
+        REFERENCES autor ( idautor );
+
+ALTER TABLE autor_test
+    ADD CONSTRAINT autor_test_evaluacion_fk FOREIGN KEY ( evaluacion_idtest )
+        REFERENCES evaluacion ( idtest );
+
+ALTER TABLE estudiante
+    ADD CONSTRAINT estudiante_programa_fk FOREIGN KEY ( programa_idprograma )
+        REFERENCES programa ( idprograma );
+
+ALTER TABLE evaluacion
+    ADD CONSTRAINT evaluacion_programa_fk FOREIGN KEY ( programa_idprograma )
+        REFERENCES programa ( idprograma );
+
+ALTER TABLE pregunta
+    ADD CONSTRAINT pregunta_evaluacion_fk FOREIGN KEY ( evaluacion_idtest )
+        REFERENCES evaluacion ( idtest );
+
+ALTER TABLE resultado
+    ADD CONSTRAINT resultado_estudiante_fk FOREIGN KEY ( estudiante_idestudiante )
+        REFERENCES estudiante ( idestudiante );
+
+ALTER TABLE resultado
+    ADD CONSTRAINT resultado_evaluacion_fk FOREIGN KEY ( evaluacion_idtest )
+        REFERENCES evaluacion ( idtest );
+
+ALTER TABLE unidad
+    ADD CONSTRAINT unidad_programa_fk FOREIGN KEY ( programa_idprograma )
+        REFERENCES programa ( idprograma );
+        
+        
+
+
+INSERT INTO programa VALUES(1,'JavaFullStack');
+INSERT INTO programa VALUES(2,'Android');
+INSERT INTO programa VALUES(3,'JavaScript');
+
+
+INSERT INTO unidad VALUES(1, 'POO', 'Se definen conceptos generales de Programación orientada a objeto',1);
+INSERT INTO unidad VALUES(2, 'Inicios Android', 'Se discute sobre la creación de android y posicionamiento en mercado actual',2);
+
+
+
+
+INSERT INTO estudiante VALUES(1,'Gerald','Reyes','Castillo','17.884.823-2',1);
+INSERT INTO estudiante VALUES(2,'Alonso','Reyes','Coria','21.783.456-2',1);
+INSERT INTO estudiante VALUES(3,'Alex','Mendez','Santander','15.435.654-2',1);
+INSERT INTO estudiante VALUES(4,'Alexadra','martinez','Castañeda','11.223.442-4',1);
+INSERT INTO estudiante VALUES(5,'Tomas','Gonzalez','Balmaceda','13.222.111-1',1);
+INSERT INTO estudiante VALUES(6,'Ignacio','Sepulveda','Roman','23.567.543-2',1);
+INSERT INTO estudiante VALUES(7,'Juan','Osorio','Campos','17.883.445-6',1);
+INSERT INTO estudiante VALUES(8,'Fernando','Martinez','Dias','22.321.543-1',1);
+INSERT INTO estudiante VALUES(9,'Pablo','Reyes','Guzman','9.234.876-1',1);
+INSERT INTO estudiante VALUES(10,'Paola','Robles','Marin','15.342.866-9',1);
+
+INSERT INTO estudiante VALUES(11,'Matias','Alcantar','Rojas','12.345.234-5',2);
+INSERT INTO estudiante VALUES(12,'Victor','Rojas','Fuentes','17.843.234-3',2);
+INSERT INTO estudiante VALUES(13,'Jonathan','reyes','castillo','16.774.734-3',2);
+INSERT INTO estudiante VALUES(14,'Marisol','Cerda','Soto','16.232.543-2',2);
+INSERT INTO estudiante VALUES(15,'Luis','Dias','balmaceda','8.342.654-3',2);
+INSERT INTO estudiante VALUES(16,'Simon','Vega','Tapia','19.234.543-1',2);
+INSERT INTO estudiante VALUES(17,'Carolina','Sandoval','Urrea','12.914.114-2',2);
+INSERT INTO estudiante VALUES(18,'Manuel','Reyes','Cerda','18.645.755-9',2);
+INSERT INTO estudiante VALUES(19,'Marcelo','Guajardo','Robles','17-535.876-4',2);
+INSERT INTO estudiante VALUES(20,'Patricio','Norambuena','Correa','16.345.567-5',2);
+
+
+INSERT INTO evaluacion VALUES(1,'Java Básico','Cuestionario java',to_date('10-05-20','dd:mm:yyyy'),100,1);
+INSERT INTO evaluacion VALUES(2,'Android Básico','Cuestionario Android',to_date('10-05-20','dd:mm:yyyy'),100,2);
+INSERT INTO evaluacion VALUES(3,'Evaluacion','Varias',to_date('10-05-20','dd:mm:yyyy'),80,Null);
+INSERT INTO evaluacion VALUES(4,'Evaluacion cero','deficiente',to_date('10-05-20','dd:mm:yyyy'),10,Null);
+
+
+INSERT INTO autor VALUES(1, 'Juan Roman');
+INSERT INTO autor VALUES(2, 'Gerald Reyes');
+INSERT INTO autor VALUES(3, 'Marcelo Bustamante');
+
+
+INSERT INTO autor_test VALUES(1,1);
+INSERT INTO autor_test VALUES(2,2);
+INSERT INTO autor_test VALUES(2,3);
+INSERT INTO autor_test VALUES(3,4);
+
+
+
+--Prueba nr° 1
+
+INSERT INTO pregunta VALUES(1,'¿Que es OOP?',10,1);
+INSERT INTO pregunta VALUES(2,'¿Que es un IDE?',10,1);
+INSERT INTO pregunta VALUES(3,'Las colecciones son utilizadas para realizar  operaciones como:',10,1);
+INSERT INTO pregunta VALUES(4,'¿Que es un String',10,1);
+INSERT INTO pregunta VALUES(5,'¿Que tipos de excepciones existen?',10,1);
+INSERT INTO pregunta VALUES(6,'¿Qué es Eclipse?',10,1);
+INSERT INTO pregunta VALUES(7,'¿Que es un ArrayList?',10,1);
+INSERT INTO pregunta VALUES(8,'¿Que es una variable?',10,1);
+INSERT INTO pregunta VALUES(9,'¿Que es un Objeto?',10,1);
+INSERT INTO pregunta VALUES(10,'¿Que es una Clase ?',10,1);
+
+
+--Prueba nr° 2
+ 
+INSERT INTO pregunta VALUES(11,'¿Que es Android"?',10,2);
+INSERT INTO pregunta VALUES(12,'¿Que es una Layout',10,2);
+INSERT INTO pregunta VALUES(13,'¿Que tipos de Lenguaje se pueden usar para programar en android?',10,2);
+INSERT INTO pregunta VALUES(14,'¿Que ides se pueden utilizar?',10,2);
+INSERT INTO pregunta VALUES(15,'¿cuando fue creado android?',10,2);
+INSERT INTO pregunta VALUES(16,'¿Que son las dependencias?',10,2);
+INSERT INTO pregunta VALUES(17,'¿Que es un imageview?',10,2);
+INSERT INTO pregunta VALUES(18,'¿Para que sirve el manifest?',10,2);
+INSERT INTO pregunta VALUES(19,'Que se puede guardar en el folder drawable',10,2);
+INSERT INTO pregunta VALUES(20,'¿Que es el gradle?',10,2);
+
+
+
+
+--Alternativas Prueba nr° 1
+ 
+--1
+INSERT INTO alternativa VALUES(1,Null,'F',1,'un lenguaje');
+INSERT INTO alternativa VALUES(2,Null,'F',1,'una forma de crear codigo');
+INSERT INTO alternativa VALUES(3,10,'V',1,'Paradigma de Programacion');
+INSERT INTO alternativa VALUES(4,Null,'F',1,'un bucle');
+
+--2
+INSERT INTO alternativa VALUES(5,10,'V',2,'Entorno de desarrollo integrado');
+INSERT INTO alternativa VALUES(6,Null,'F',2,'programa para codificar');
+INSERT INTO alternativa VALUES(7,null,'f',2,'metodo de aprendizaje');
+INSERT INTO alternativa VALUES(8,Null,'F',2,'un lenguaje desarrollado para java');
+
+--3
+INSERT INTO alternativa VALUES(9,Null,'F',3,'Guardar datos ordenadamente');
+INSERT INTO alternativa VALUES(10,Null,'F',3,'guardar datros desordenadamente');
+INSERT INTO alternativa VALUES(11,Null,'F',3,'guardar datos');
+INSERT INTO alternativa VALUES(12,10,'V',3,'todas las anteriores');
+
+--4
+INSERT INTO alternativa VALUES(13,Null,'F',4,'un numero');
+INSERT INTO alternativa VALUES(14,Null,'F',4,'una letra');
+INSERT INTO alternativa VALUES(15,10,'V',4,'una cadena de texto');
+INSERT INTO alternativa VALUES(16,Null,'F',4,'un bucle');
+
+--5
+INSERT INTO alternativa VALUES(17,Null,'F',5,'ObjectException');
+INSERT INTO alternativa VALUES(18,Null,'F',5,'StringException');
+INSERT INTO alternativa VALUES(19,10,'V',5,'IOException');
+INSERT INTO alternativa VALUES(20,Null,'F',5,'Ninguna de las anteriores');
+
+--6
+INSERT INTO alternativa VALUES(21,Null,'F',6,'una Excepcion');
+INSERT INTO alternativa VALUES(22,Null,'F',6,'Un fenomeno natural');
+INSERT INTO alternativa VALUES(23,10,'V',6,'Un IDE');
+INSERT INTO alternativa VALUES(24,Null,'F',6,'un objeto');
+
+--7
+INSERT INTO alternativa VALUES(25,Null,'F',7,'un Objeto');
+INSERT INTO alternativa VALUES(26,10,'V',7,'Una Clase');
+INSERT INTO alternativa VALUES(27,Null,'F',7,'Una matriz');
+INSERT INTO alternativa VALUES(28,Null,'F',7,'Ninguna de las anteriores');
+
+--8
+INSERT INTO alternativa VALUES(29,Null,'F',8,'un lenguaje');
+INSERT INTO alternativa VALUES(30,Null,'F',8,'una forma de crear codigo');
+INSERT INTO alternativa VALUES(31,10,'V',8,'espacio donde se guarda un dato');
+INSERT INTO alternativa VALUES(32,Null,'F',8,'un bucle');
+
+--9
+INSERT INTO alternativa VALUES(33,10,'V',9,'Componente autonomo');
+INSERT INTO alternativa VALUES(34,Null,'F',9,'un lenguaje');
+INSERT INTO alternativa VALUES(35,Null,'F',9,'una forma de crear codigo');
+INSERT INTO alternativa VALUES(36,Null,'F',9,'un bucle');
+
+--10
+INSERT INTO alternativa VALUES(37,Null,'F',10,'un lenguaje');
+INSERT INTO alternativa VALUES(38,Null,'F',10,'una forma de crear codigo');
+INSERT INTO alternativa VALUES(39,10,'V',10,'Entidad que contendra un objeto');
+INSERT INTO alternativa VALUES(40,Null,'F',10,'un bucle');
+
+
+
+
+
+--Alternativas Prueba nr° 2
+
+--1
+INSERT INTO alternativa VALUES(1,Null,'F',11,'un lenguaje');
+INSERT INTO alternativa VALUES(2,Null,'F',11,'un Modelo');
+INSERT INTO alternativa VALUES(3,10,'V',11,'Sistema Operativo');
+INSERT INTO alternativa VALUES(4,Null,'F',11,'un Paradigma');
+
+--2
+INSERT INTO alternativa VALUES(5,10,'V',12,'Contenedor de Vistas');
+INSERT INTO alternativa VALUES(6,Null,'F',12,'una aplicacion ');
+INSERT INTO alternativa VALUES(7,null,'f',12,'un framework');
+INSERT INTO alternativa VALUES(8,Null,'F',12,'un archivo del sistema');
+
+--3
+INSERT INTO alternativa VALUES(9,Null,'F',13,'Java');
+INSERT INTO alternativa VALUES(10,Null,'F',13,'Kotlin');
+INSERT INTO alternativa VALUES(11,Null,'F',13,'JavaScript');
+INSERT INTO alternativa VALUES(12,10,'V',13,'todas las anteriores');
+
+--4
+INSERT INTO alternativa VALUES(13,Null,'F',14,'eclipse,android studio');
+INSERT INTO alternativa VALUES(14,Null,'F',14,'netbeans');
+INSERT INTO alternativa VALUES(15,10,'V',14,'Android studio, intelliJ');
+INSERT INTO alternativa VALUES(16,Null,'F',14,'VSCode');
+
+--5
+INSERT INTO alternativa VALUES(17,Null,'F',15,'2009');
+INSERT INTO alternativa VALUES(18,Null,'F',15,'2008');
+INSERT INTO alternativa VALUES(19,10,'V',15,'2007');
+INSERT INTO alternativa VALUES(20,Null,'F',15,'Ninguna de las anteriores');
+
+--6
+INSERT INTO alternativa VALUES(21,Null,'F',16,'repositorio');
+INSERT INTO alternativa VALUES(22,Null,'F',16,'un Programa');
+INSERT INTO alternativa VALUES(23,10,'V',16,'Objeto Binario Externo');
+INSERT INTO alternativa VALUES(24,Null,'F',16,'un objeto');
+
+--7
+INSERT INTO alternativa VALUES(25,Null,'F',17,'vista que maneja videos');
+INSERT INTO alternativa VALUES(26,10,'V',17,'vista que maneja las imagenes');
+INSERT INTO alternativa VALUES(27,Null,'F',17,'vista que maneja audios');
+INSERT INTO alternativa VALUES(28,Null,'F',17,'Ninguna de las anteriores');
+
+--8
+INSERT INTO alternativa VALUES(29,Null,'F',18,'un lenguaje');
+INSERT INTO alternativa VALUES(30,Null,'F',18,'una forma de crear codigo');
+INSERT INTO alternativa VALUES(31,10,'V',18,'un archivo de configuracion');
+INSERT INTO alternativa VALUES(32,Null,'F',18,'un bucle');
+
+--9
+INSERT INTO alternativa VALUES(33,10,'V',19,'Una Clase');
+INSERT INTO alternativa VALUES(34,Null,'F',19,'un lenguaje');
+INSERT INTO alternativa VALUES(35,Null,'F',19,'una forma de crear codigo');
+INSERT INTO alternativa VALUES(36,Null,'F',19,'un bucle');
+
+--10
+INSERT INTO alternativa VALUES(37,Null,'F',20,'un lenguaje');
+INSERT INTO alternativa VALUES(38,Null,'F',20,'una forma de crear codigo');
+INSERT INTO alternativa VALUES(39,10,'V',20,'Conpilador de codigo');
+INSERT INTO alternativa VALUES(40,Null,'F',20,'un bucle');
+
+
+--Generar Resultados test 1
+
+INSERT INTO resultado VALUES(1,50,5,5,3.5,'R',9,1);
+INSERT INTO resultado VALUES(2,90,9,1,6.3,'A',1,1);
+INSERT INTO resultado VALUES(3,60,6,4,4.2,'A',3,1);
+INSERT INTO resultado VALUES(4,80,8,2,5.6,'A',2,1);
+INSERT INTO resultado VALUES(5,50,5,5,3.5,'R',4,1);
+INSERT INTO resultado VALUES(6,90,9,1,6.3,'A',6,1);
+INSERT INTO resultado VALUES(7,30,3,7,2.1,'R',5,1);
+INSERT INTO resultado VALUES(8,30,3,7,2.1,'R',10,1);
+INSERT INTO resultado VALUES(9,80,8,2,5.6,'A',7,1);
+INSERT INTO resultado VALUES(10,60,6,4,4.2,'A',8,1);
+
+
+
+--Generar Resultados test 2 
+
+INSERT INTO resultado VALUES(20,30,3,7,2.1,'R',20,2);
+INSERT INTO resultado VALUES(11,90,9,1,6.3,'A',11,2);
+INSERT INTO resultado VALUES(17,90,9,1,6.3,'A',17,2);
+INSERT INTO resultado VALUES(19,50,5,5,3.5,'R',19,2);
+INSERT INTO resultado VALUES(14,50,5,5,3.5,'R',14,2);
+INSERT INTO resultado VALUES(16,90,9,1,6.3,'A',16,2);
+INSERT INTO resultado VALUES(12,80,8,2,5.6,'A',12,2);
+INSERT INTO resultado VALUES(15,30,3,7,2.1,'R',15,2);
+INSERT INTO resultado VALUES(18,90,9,1,6.3,'A',18,2);
+INSERT INTO resultado VALUES(13,60,6,4,4.2,'A',13,2);
+
+
+
+--CONSULTAS
+
+--1
+
+SELECT p.nombre, COUNT(e.programa_idprograma)C_Evaluaciones
+FROM evaluacion e 
+INNER JOIN programa p 
+ON e.programa_idprograma = p.idprograma 
+GROUP BY p.nombre;
+
+--2
+SELECT p.nombre SIN_EVALUACIONES
+FROM evaluacion e
+RIGHT JOIN programa p
+ON e.programa_idprograma = p.idprograma 
+WHERE e.programa_idprograma IS NULL;
+
+
+--3
+SELECT e.nombre evaluaciones_deficientes
+FROM pregunta p
+RIGHT JOIN evaluacion e
+ON e.idtest = p.evaluacion_idtest 
+WHERE p.evaluacion_idtest IS NULL;
+
+
+
+--4
+SELECT p.nombre CURSO, COUNT(e.programa_idprograma)ALUMNOS
+FROM programa p
+LEFT JOIN estudiante e
+ON p.idprograma = e.programa_idprograma
+GROUP BY p.nombre;
+
+--5
+SELECT e.nombre, e.primerapellido, ((r.cantidadcorrectas - r.cantidadincorrectas) / 4)PUNTAJE
+FROM resultado r
+RIGHT JOIN estudiante e
+ON e.idestudiante = r.estudiante_idestudiante;
+
+--6
+SELECT e.nombre, e.primerapellido, r.nota
+FROM resultado r
+INNER JOIN estudiante e
+ON e.idestudiante = r.estudiante_idestudiante;
+
+--7
+SELECT e.nombre, e.primerapellido, r.nota NOTA, p.nombre CURSO
+FROM resultado r
+RIGHT JOIN estudiante e
+ON e.idestudiante = r.estudiante_idestudiante
+RIGHT JOIN programa p
+ON e.programa_idprograma = p.idprograma
+WHERE r.nota > 3.9 AND p.idprograma=2;
+
+
+
+--8
+SELECT e.nombre evaluacion, AVG (nota)promedio_curso
+FROM resultado r
+INNER JOIN programa p
+ON r.evaluacion_idtest = p.idprograma
+INNER JOIN evaluacion e
+ON r.evaluacion_idtest = e.idtest
+GROUP BY evaluacion_idtest, p.nombre, e.nombre;

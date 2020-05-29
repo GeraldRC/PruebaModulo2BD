@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4F550E39-A283-B634-FFA0-0969EC1E962D" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="ESTUDIANTE">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>ESTUDIANTE</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDESTUDIANTE" id="D4A352E9-1731-1D41-AAEC-F18476987D2B">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ESTUDIANTE</sourceObjSchema>
+<sourceObjName>IDESTUDIANTE</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="312228C8-41F1-A911-E859-EE0D2056FC91">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ESTUDIANTE</sourceObjSchema>
+<sourceObjName>NOMBRE</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIMERAPELLIDO" id="33AC4C01-09AF-D83E-3698-9ECD296179FB">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ESTUDIANTE</sourceObjSchema>
+<sourceObjName>PRIMERAPELLIDO</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEGUNDOAPELLIDO" id="B6F9C70B-2767-D35F-85F6-B3084DEA9A2C">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ESTUDIANTE</sourceObjSchema>
+<sourceObjName>SEGUNDOAPELLIDO</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RUT" id="149FC28E-7890-EFEC-E3A9-87A64F011A5E">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ESTUDIANTE</sourceObjSchema>
+<sourceObjName>RUT</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROGRAMA_IDPROGRAMA" id="6BBAFAC4-9BCD-2053-B1D7-41EE7C9CF5C4">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ESTUDIANTE</sourceObjSchema>
+<sourceObjName>PROGRAMA_IDPROGRAMA</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C8F2964D-ACCA-CEE8-3336-7450600DC5A7" referredColumn="A71D357C-03E1-3481-8286-D7F5C9CD67A3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B8824F62-082D-134E-52AE-1FCFCCFA2E2A" name="ESTUDIANTE_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>ESTUDIANTE_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4A352E9-1731-1D41-AAEC-F18476987D2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC253CA5-3F70-D643-9F80-638012FCF920" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="ESTUDIANTE_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>ESTUDIANTE_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4A352E9-1731-1D41-AAEC-F18476987D2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96E90FDD-78A1-A528-8C2C-92BDEFDA1787" name="ESTUDIANTE_PROGRAMA_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BBAFAC4-9BCD-2053-B1D7-41EE7C9CF5C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

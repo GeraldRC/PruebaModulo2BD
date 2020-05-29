@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DAED049E-4ECD-6DB1-9A83-628D499601C5" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="PROGRAMA">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>PROGRAMA</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDPROGRAMA" id="A71D357C-03E1-3481-8286-D7F5C9CD67A3">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>PROGRAMA</sourceObjSchema>
+<sourceObjName>IDPROGRAMA</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="856EC031-F517-6562-479C-5B946669BD7D">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>PROGRAMA</sourceObjSchema>
+<sourceObjName>NOMBRE</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF9F34E2-092D-08C0-C47C-6EB3188F4B73" name="PROGRAMA_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>PROGRAMA_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A71D357C-03E1-3481-8286-D7F5C9CD67A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B212503-68E1-96C2-0E69-14EEDAD1DA97" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="PROGRAMA_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>PROGRAMA_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A71D357C-03E1-3481-8286-D7F5C9CD67A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F9238FCD-8A2A-8449-859E-C897986D47C8" name="EVALUACION">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>41BA302F-8DDC-5092-AD0F-9E64DF344227</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDTEST" id="291D3F77-E38A-8809-8341-19D1C7F9908D">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>C1587F66-04F1-9A79-18DE-D17367DE43E9</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="D3034BCB-A89A-D138-A285-DE19F7FD3DC0">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>8F5F1D06-30BE-45CF-C40F-438088C96C3B</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRIPCION" id="4B10C285-EE6A-35B7-6B98-EBE873D581EB">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>36582D46-50AE-D6E4-29F7-FD8803A8AA98</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHACREACION" id="C75E8539-7365-42CA-1E38-D431AD091AEC">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>7F5AF9D5-F49E-6487-9572-E0FDCBE9288E</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PUNTAJEPRUEBA" id="50E9FC19-6446-27DA-042E-166D23BDD3C9">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>880B825D-7A5A-8562-9C68-95A23C659454</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PROGRAMA IDPROGRAMA" id="BCA0963A-BD94-303D-24A7-673C5EF04441">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>8EC36D50-5DC1-DA2A-95FC-E5FB64AC1A6A</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>2DFBCACD-4DB9-CEE0-0506-1A74377864A5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="003B8DE9-88E1-5FA9-BD79-0F2CB4637500" name="EVALUACION NOMBRE UN">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>6D6303BB-F310-A662-F209-12336E11D0B9</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>D3034BCB-A89A-D138-A285-DE19F7FD3DC0</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="207386CA-C4D3-999B-9323-12DF0909FEF8" name="EVALUACION PK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>4322FA0D-39E1-ADED-D163-A73A2F538C8F</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>291D3F77-E38A-8809-8341-19D1C7F9908D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

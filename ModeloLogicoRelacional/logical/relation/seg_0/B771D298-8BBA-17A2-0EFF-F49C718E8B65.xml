@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RESULTADO_EVALUACION_FK" directorySegmentName="seg_0" id="B771D298-8BBA-17A2-0EFF-F49C718E8B65">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:18:20 UTC</createdTime>
+<generatorID>C10A3203-6AE4-C10D-06B7-4D4A7B6BBE11</generatorID>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<engineerTo>
+<item key="13020578-8F58-FEAD-4551-6BFDDE8505FA" value="true"/>
+</engineerTo>
+<sourcePk>207386CA-C4D3-999B-9323-12DF0909FEF8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F9238FCD-8A2A-8449-859E-C897986D47C8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9EAA92C1-C473-B4A0-3481-EA511EB40133</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3378E648-63B5-13AD-F733-430B3200D18E" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="AUTOR">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>AUTOR</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDAUTOR" id="FF66C8A3-CC9E-53C2-2CFA-6DBFAA574C22">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>AUTOR</sourceObjSchema>
+<sourceObjName>IDAUTOR</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="4F903994-5EEC-FCF0-36EC-AC92E5DE156A">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>AUTOR</sourceObjSchema>
+<sourceObjName>NOMBRE</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="77BC0475-DC07-B66F-B36B-AB448D50DC4A" name="AUTOR_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>AUTOR_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF66C8A3-CC9E-53C2-2CFA-6DBFAA574C22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74BCB20D-5BA3-EE39-66E9-3A68B51C9A46" name="AUTOR_NOMBRE_UN">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>AUTOR_NOMBRE_UN</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F903994-5EEC-FCF0-36EC-AC92E5DE156A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3EB19535-336C-4F93-D64D-0AF95C995CF6" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="AUTOR_NOMBRE_UN">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>AUTOR_NOMBRE_UN</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F903994-5EEC-FCF0-36EC-AC92E5DE156A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9759ACFF-D74A-CB45-8416-6CE2D472D773" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="AUTOR_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>AUTOR_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF66C8A3-CC9E-53C2-2CFA-6DBFAA574C22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

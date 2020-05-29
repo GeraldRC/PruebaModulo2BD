@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DF7FC1CC-3E66-A247-BB8C-181F1098FCFC" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="ALTERNATIVA">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>ALTERNATIVA</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:47 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDALTERNATIVA" id="7A79EE6D-808B-9087-D634-0CC2BF31E823">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ALTERNATIVA</sourceObjSchema>
+<sourceObjName>IDALTERNATIVA</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,20,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PUNTAJEALTERNATIVA" id="24857B35-5331-1F43-F704-65ECEF0B7A33">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ALTERNATIVA</sourceObjSchema>
+<sourceObjName>PUNTAJEALTERNATIVA</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="0B673D9A-649B-75BD-60FD-3F82FFBFAAA4">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ALTERNATIVA</sourceObjSchema>
+<sourceObjName>ESTADO</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PREGUNTA_IDPREGUNTA" id="CA4DF8D2-4B87-8399-111F-E360610701F6">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ALTERNATIVA</sourceObjSchema>
+<sourceObjName>PREGUNTA_IDPREGUNTA</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6C884176-B50F-2C50-695F-98A55C08FC1E" referredColumn="290CE29B-E660-DB6E-FC5D-C84D07192D77"/>
+</associations>
+</Column>
+<Column name="ENUNCIADO" id="3DF22949-984A-FB73-4D2E-1260DBFD9EC4">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>ALTERNATIVA</sourceObjSchema>
+<sourceObjName>ENUNCIADO</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C3B4374F-1920-E99E-5E48-905F7F40CA7B" name="ALTERNATIVA_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>ALTERNATIVA_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A79EE6D-808B-9087-D634-0CC2BF31E823"/>
+<colUsage columnID="CA4DF8D2-4B87-8399-111F-E360610701F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CBB4D4E-FCC8-9392-60A6-FE8E5D643EDF" schemaObject="879F9035-592F-DC6E-EA4C-F0204211E2A9" name="ALTERNATIVA_PK">
+<sourceConnName>test</sourceConnName>
+<sourceObjSchema>GERALD</sourceObjSchema>
+<sourceObjName>ALTERNATIVA_PK</sourceObjName>
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A79EE6D-808B-9087-D634-0CC2BF31E823"/>
+<colUsage columnID="CA4DF8D2-4B87-8399-111F-E360610701F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B33726C4-15A8-014C-8C18-D4D2605FEA10" name="ALTERNATIVA_PREGUNTA_FK">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA4DF8D2-4B87-8399-111F-E360610701F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

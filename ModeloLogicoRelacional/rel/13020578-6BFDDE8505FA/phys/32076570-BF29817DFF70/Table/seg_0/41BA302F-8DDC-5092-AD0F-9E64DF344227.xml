@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="EVALUACION" directorySegmentName="seg_0" id="41BA302F-8DDC-5092-AD0F-9E64DF344227">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<schemaObject>879F9035-592F-DC6E-EA4C-F0204211E2A9</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C8CBA618-2FA8-C83C-EC7F-C85DD83F8AD6</segment>
+<tableSpace>35F2B419-8C95-7349-CCD8-A2794A21E22C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PROGRAMA_IDPROGRAMA" id="0AFE5FEA-A25E-AD8D-138D-5BB3E5BBE77D">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRIPCION" id="36582D46-50AE-D6E4-29F7-FD8803A8AA98">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHACREACION" id="7F5AF9D5-F49E-6487-9572-E0FDCBE9288E">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PUNTAJEPRUEBA" id="880B825D-7A5A-8562-9C68-95A23C659454">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOMBRE" id="8F5F1D06-30BE-45CF-C40F-438088C96C3B">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IDTEST" id="C1587F66-04F1-9A79-18DE-D17367DE43E9">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EVALUACION_NOMBRE_UN" id="A5E89718-75EC-A0E9-21F0-68A98F68C760">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<schemaObject>879F9035-592F-DC6E-EA4C-F0204211E2A9</schemaObject>
+<segment>0EA32FEA-3874-A580-30AE-8FB03704A90C</segment>
+<tableSpace>35F2B419-8C95-7349-CCD8-A2794A21E22C</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EVALUACION_PK" id="B6C0C290-E040-66C8-B0B2-DE4C07E9B84B">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<schemaObject>879F9035-592F-DC6E-EA4C-F0204211E2A9</schemaObject>
+<segment>0EA32FEA-3874-A580-30AE-8FB03704A90C</segment>
+<tableSpace>35F2B419-8C95-7349-CCD8-A2794A21E22C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="EVALUACION_PROGRAMA_FK" id="D482D805-3628-68FC-7244-420B5A9F31E8">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="EVALUACION_PK" id="4322FA0D-39E1-ADED-D163-A73A2F538C8F">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<segment>0EA32FEA-3874-A580-30AE-8FB03704A90C</segment>
+<tableSpace>35F2B419-8C95-7349-CCD8-A2794A21E22C</tableSpace>
+<existingIndex>B6C0C290-E040-66C8-B0B2-DE4C07E9B84B</existingIndex>
+<indexSegment>0EA32FEA-3874-A580-30AE-8FB03704A90C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="EVALUACION_NOMBRE_UN" id="6D6303BB-F310-A662-F209-12336E11D0B9">
+<createdBy>Alumno</createdBy>
+<createdTime>2020-05-28 21:17:48 UTC</createdTime>
+<ownerDesignName>ModeloLogicoRelacional</ownerDesignName>
+<segment>0EA32FEA-3874-A580-30AE-8FB03704A90C</segment>
+<tableSpace>35F2B419-8C95-7349-CCD8-A2794A21E22C</tableSpace>
+<existingIndex>A5E89718-75EC-A0E9-21F0-68A98F68C760</existingIndex>
+<indexSegment>0EA32FEA-3874-A580-30AE-8FB03704A90C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>
